@@ -13,18 +13,16 @@ func loadFile(file = "res://config.ini"):
 	configFile.load(file) 
 	
 	# ---------- 
-	
-	# METHOD-1: 
-	# Check if "hostname" exists in Config section 
+
+	# Check if key exists in Config section 
 	if (configFile.has_section_key("Config", "Width")): 
 	
-	    # Get hostname value and print it 
+	    # Get Width value and print it 
 	    var width = configFile.get_value("Config", "Width") 
 	    print("Width: ", width) 
 	
 	# ---------- 
 	
-	# METHOD-2: 
 	# Assign value without checking if it exists 
 	var height = configFile.get_value("Config", "Height") 
 	
